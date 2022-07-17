@@ -1,7 +1,7 @@
 const authServer = {
   host: 'http://localhost:80',
 	authorizationEndpoint: 'http://localhost:80/authorise',
-	tokenEndpoint: 'http://localhost:80/token',
+	tokenEndpoint: 'http://localhost:80/api/v1/token',
   introspectionEndpoint: 'http://localhost:80/introspect'
 };
 
