@@ -1,24 +1,23 @@
-const authServer = {
-  host: 'http://localhost:80',
-  introspectionEndpoint: 'http://localhost:80/api/v1/introspect'
+const auth = {
+  host: process.env.AUTH_DOMAIN,
+  introspectionEndpoint: `${process.env.AUTH_DOMAIN}/api/v1/introspect`
 };
 
-const resource = {
-  host: 'http://localhost:9002',
-	resourceId: "protected-resource-1",
-  resourceSecret: "protected-resource-secret-1"
+const protectedResource = {
+  resourceId: "tokyomap-resource-dev",
+  resourceSecret: "fuga"
 };
 
 const postgres = {
-  host: 'localhost',
-  database: 'postgres',
-  user: 'postgres',
-  password: 'postgres',
-  port: 5432,
+  host: process.env.DB_HOST,
+  database: process.env.DB_DATABASE,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  port: process.env.DB_PORT,
 };
 
 module.exports = {
-  authServer,
-  resource,
+  auth,
+  protectedResource,
   postgres
 };
