@@ -59,11 +59,17 @@ const createRequestBody = obj => Object.keys(obj).map(key => `${key}=${encodeURI
  */
 const isScopeValid = (requstedScope, scope) => requstedScope && Object.values(requstedScope).some(s => s === scope);
 
+/**
+ * get properties from an object
+ */
+const getPropsFromObj = (props, obj) => props.reduce((a, p) => ({...a, [p]: obj[p]}), {});
+
 module.exports = {
   buildUrl,
   encodeClientCredentials,
   fetchCurrentJst,
   fetchCurrentDatetimeJst,
   createRequestBody,
-  isScopeValid
+  isScopeValid,
+  getPropsFromObj
 };
