@@ -6,4 +6,5 @@ docker container run -d \
   --rm \
   --name resource \
   --net network_dev \
+  --ip 192.168.56.130 \
   tokyomap.resource:dev 
