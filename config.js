@@ -1,6 +1,6 @@
 const auth = {
-  host: process.env.AUTH_DOMAIN,
-  introspectionEndpoint: `${process.env.AUTH_DOMAIN}/api/v1/introspect`
+  host: process.env.AUTH_CONTAINER,
+  introspectionEndpoint: `${process.env.AUTH_CONTAINER}/api/v1/introspect`
 };
 
 const protectedResource = {
